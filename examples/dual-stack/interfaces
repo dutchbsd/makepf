@@ -1,0 +1,4 @@
+# ZONE  INTERFACE  IPV4_PREFIX     IPV6_PREFIX
+net     vio0       any             any
+loc     vio1       192.168.1.0/24  2001:db8:100:1::/64
+wifi    vio2       192.168.2.0/24  2001:db8:100:2::/64

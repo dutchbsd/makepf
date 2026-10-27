@@ -1,0 +1,5 @@
+# SOURCE  DESTINATION  FAMILY  ACTION  [LOG]
+loc       net          both    ACCEPT
+wifi      net          both    ACCEPT
+fw        net          both    ACCEPT
+all       all          both    DROP    log

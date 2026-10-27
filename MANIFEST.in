@@ -1,0 +1,5 @@
+include .editorconfig CONTRIBUTING.md LICENSE
+recursive-include docs *.md
+recursive-include examples zones interfaces policy rules groups nat forwards settings
+recursive-include tests *.py
+include tools/build.py

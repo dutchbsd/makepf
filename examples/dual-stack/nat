@@ -1,0 +1,3 @@
+# SOURCE  DESTINATION  FAMILY
+loc       net          inet
+wifi      net          inet

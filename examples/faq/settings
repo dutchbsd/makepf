@@ -1,0 +1,8 @@
+loopback      yes
+normalize     yes
+mss           1440
+loginterface  net
+dhcp-client   net
+dhcp-server   loc
+dhcp-server   wifi
+icmp-errors   yes

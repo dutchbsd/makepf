@@ -1,0 +1,4 @@
+# ZONE  INTERFACE  IPV4_PREFIX     IPV6_PREFIX
+net     em0        any             -
+loc     em1        192.168.1.0/24  -
+wifi    athn0      192.168.2.0/24  -

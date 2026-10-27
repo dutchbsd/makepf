@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "makepf"
+dynamic = ["version"]
+description = "Compile zone-based firewall configuration into native OpenBSD PF rules."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "BSD-2-Clause"
+license-files = ["LICENSE"]
+authors = [{name = "DutchBSD B.V."}]
+dependencies = []
+
+[project.scripts]
+makepf = "makepf.cli:main"
+
+[project.urls]
+Homepage = "https://www.dutchbsd.com/"
+Source = "https://github.com/dutchbsd/makepf"
+Documentation = "https://github.com/dutchbsd/makepf/blob/master/README.md"
+Issues = "https://github.com/dutchbsd/makepf/issues"
+
+[tool.setuptools]
+packages = ["makepf"]
+
+[tool.setuptools.dynamic]
+version = {attr = "makepf.__version__"}

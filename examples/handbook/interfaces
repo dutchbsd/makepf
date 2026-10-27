@@ -1,0 +1,3 @@
+# ZONE  INTERFACE  IPV4_PREFIX  IPV6_PREFIX
+net     re0        any          -
+loc     re1        10.0.0.0/24  -

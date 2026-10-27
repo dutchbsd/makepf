@@ -1,0 +1,4 @@
+# SOURCE  DESTINATION  FAMILY  ACTION  [LOG]
+loc       all          inet    ACCEPT
+fw        net          inet    ACCEPT
+all       all          both    DROP    log

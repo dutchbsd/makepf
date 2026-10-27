@@ -1,0 +1,3 @@
+# ACTION  SOURCE         DESTINATION    FAMILY  PROTOCOL  SERVICE  [LOG]
+DROP      net:@martians  all            inet    any       -
+REJECT    all            net:@martians  inet    any       -

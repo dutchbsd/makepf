@@ -1,0 +1,11 @@
+# ACTION  SOURCE         DESTINATION            FAMILY  PROTOCOL  SERVICE  [LOG]
+DROP      net:@martians  all                    inet    any       -
+REJECT    all            net:@martians          inet    any       -
+ACCEPT    loc            fw                     both    tcp       22
+ACCEPT    loc            fw                     both    udp       53
+ACCEPT    loc            fw                     both    tcp       53
+ACCEPT    wifi           fw                     both    udp       53
+ACCEPT    wifi           fw                     both    tcp       53
+ACCEPT    loc            fw                     inet    icmp      8
+ACCEPT    loc            fw                     inet6   icmp6     128
+ACCEPT    net            loc:2001:db8:100:1::2  inet6   tcp       80,443

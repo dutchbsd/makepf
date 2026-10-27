@@ -1,0 +1,10 @@
+loopback       yes
+normalize      yes
+loginterface   net
+dhcp-client    net
+dhcp-server    loc
+dhcp-server    wifi
+ipv6-neighbor  net
+ipv6-router    loc
+ipv6-router    wifi
+icmp-errors    yes

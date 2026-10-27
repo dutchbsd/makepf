@@ -1,0 +1,3 @@
+# SOURCE  DESTINATION  FAMILY  PROTOCOL  PUBLIC_PORT  TARGET       TARGET_PORT  [LOG]
+net       loc          inet    tcp       80           192.168.1.2  80
+net       loc          inet    tcp       443          192.168.1.2  443

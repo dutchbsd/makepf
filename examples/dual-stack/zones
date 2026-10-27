@@ -1,0 +1,5 @@
+# NAME  TYPE
+fw      firewall
+net     dual
+loc     dual
+wifi    dual
