@@ -6,21 +6,25 @@ MakePF compiles zone-based firewall configuration into native OpenBSD PF rules.
 Zones name the networks; policies and rules describe which connections may pass
 between them. The generated ruleset can be reviewed with standard PF tools.
 
-MakePF targets **OpenBSD 7.9** and requires **Python 3.11 or later**. It uses only
-the Python standard library. Checking and compiling run without root privileges.
+MakePF is for **OpenBSD**. It requires **Python 3.11 or later** and uses only the
+Python standard library. Checking and compiling run without root privileges.
 On the OpenBSD router, `reload` validates, loads and saves the ruleset for reboot.
 Interface setup and other network services remain OpenBSD tasks.
 
 ## Install
 
-Install the system command to manage PF on an OpenBSD 7.9 router. Python and Git
+Install the system command to manage PF on an OpenBSD router. Python and Git
 are packages, separate from OpenBSD base. The following steps require an account
 with administrative access through `doas`.
 
 ### Install prerequisites
 
+The commands below use Python 3.14. If your OpenBSD release provides another
+Python 3.11 or later version, use its package flavor and versioned executable
+instead.
+
 ```sh
-doas pkg_add python%3.13 git
+doas pkg_add python%3.14 git
 ```
 
 ### Get the source
@@ -38,7 +42,7 @@ From the cloned `makepf` directory, build the executable archive and install it
 as the root-owned system command:
 
 ```sh
-/usr/local/bin/python3.13 tools/build.py
+/usr/local/bin/python3.14 tools/build.py
 doas install -o root -g bin -m 755 dist/makepf /usr/local/bin/makepf
 makepf --version
 ```
@@ -64,7 +68,7 @@ pipx ensurepath
 Open a new terminal, then install MakePF as the regular user:
 
 ```sh
-pipx install --python /usr/local/bin/python3.13 makepf
+pipx install --python /usr/local/bin/python3.14 makepf
 ```
 
 A personal installation can check and compile configurations alongside the
@@ -109,7 +113,7 @@ permit persist :wheel as root cmd makepf args reload --adopt
 
 These command-specific rules use OpenBSD's system search path. This lets
 `doas makepf reload` use `/usr/local/bin/makepf` even when a personal installation
-comes first in the user's `PATH`. See [`doas.conf(5)`](https://man.openbsd.org/OpenBSD-7.9/doas.conf.5).
+comes first in the user's `PATH`. See [`doas.conf(5)`](https://man.openbsd.org/doas.conf.5).
 
 ### Check and load
 

@@ -33,7 +33,7 @@ MakePF does not configure wireless hardware.
 
 For dual stack, obtain a routed IPv6 prefix with a separate `/64` for each inside
 network, configure the addresses and upstream route, and enable IPv6 forwarding.
-Configure [`rad(8)`](https://man.openbsd.org/OpenBSD-7.9/rad.8) on the inside
+Configure [`rad(8)`](https://man.openbsd.org/rad.8) on the inside
 interfaces for SLAAC. Its `rad.conf` interface declarations and the MakePF
 `ipv6-router` declarations must describe the same interfaces.
 
@@ -139,7 +139,7 @@ for backup and failure handling.
 
 Reloading rules does not revoke existing PF states. Test new connections after
 a policy change. If existing sessions must be revoked, manage the relevant
-states deliberately with [`pfctl(8)`](https://man.openbsd.org/OpenBSD-7.9/pfctl.8);
+states deliberately with [`pfctl(8)`](https://man.openbsd.org/pfctl.8);
 MakePF never removes them.
 
 ## Verify the result
