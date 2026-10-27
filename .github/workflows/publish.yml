@@ -6,7 +6,7 @@ on:
       tag:
         description: Version tag at the current master commit
         required: true
-        default: v1.0.0
+        default: v1.0.1
         type: string
 
 permissions:
@@ -48,7 +48,7 @@ jobs:
 
           tag = os.environ['RELEASE_TAG']
           if not re.fullmatch(r'v[0-9]+\.[0-9]+\.[0-9]+', tag):
-              raise SystemExit('Expected a release tag such as v1.0.0')
+              raise SystemExit('Expected a release tag such as v1.0.1')
           def revision(ref):
               return subprocess.check_output(['git', 'rev-parse', '--verify', ref], text=True).strip()
           head = revision('HEAD')

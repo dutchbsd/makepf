@@ -53,7 +53,7 @@ MakePF runtime dependencies. From the repository root:
 With pipx installed, test the wheel without publishing it:
 
 ```sh
-pipx install --python /usr/local/bin/python3.14 ./dist/makepf-1.0.0-py3-none-any.whl
+pipx install --python /usr/local/bin/python3.14 ./dist/makepf-1.0.1-py3-none-any.whl
 makepf --version
 ```
 

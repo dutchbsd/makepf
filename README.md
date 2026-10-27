@@ -50,7 +50,7 @@ makepf --version
 **Example output**
 
 ```text
-MakePF 1.0.0
+MakePF 1.0.1
 ```
 
 The archive uses the Python interpreter that built it. Keep that interpreter
